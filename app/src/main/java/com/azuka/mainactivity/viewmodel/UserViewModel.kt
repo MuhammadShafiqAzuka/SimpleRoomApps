@@ -4,7 +4,7 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
-import com.azuka.mainactivity.data.User
+import com.azuka.mainactivity.model.User
 import com.azuka.mainactivity.data.UserDatabase
 import com.azuka.mainactivity.repository.UserRepository
 import kotlinx.coroutines.Dispatchers
@@ -27,4 +27,9 @@ class UserViewModel(application: Application): AndroidViewModel(application) {
         }
     }
 
+    fun updateUser(user: User){
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.updateUser(user)
+        }
+    }
 }
