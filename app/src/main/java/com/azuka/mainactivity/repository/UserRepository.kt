@@ -1,7 +1,7 @@
 package com.azuka.mainactivity.repository
 
 import androidx.lifecycle.LiveData
-import com.azuka.mainactivity.data.User
+import com.azuka.mainactivity.model.User
 import com.azuka.mainactivity.data.UserDAO
 
 class UserRepository(private val userDao: UserDAO) {
@@ -12,4 +12,7 @@ class UserRepository(private val userDao: UserDAO) {
         userDao.addUser(user)
     }
 
+    suspend fun updateUser(user: User){
+        userDao.updateUser(user)
+    }
 }
