@@ -11,7 +11,7 @@ import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.azuka.mainactivity.R
-import com.azuka.mainactivity.data.User
+import com.azuka.mainactivity.model.User
 import com.azuka.mainactivity.viewmodel.UserViewModel
 import kotlinx.android.synthetic.main.fragment_add.*
 import kotlinx.android.synthetic.main.fragment_add.view.*
